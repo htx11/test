@@ -1,0 +1,9 @@
+resources:
+- apidemo-deployment.yaml
+- apidemo-service.yaml
+- apidemo-ingress.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: 192.168.31.104/apidemo/apidemo
+  newTag: ef7300a0
