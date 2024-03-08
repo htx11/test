@@ -1,0 +1,11 @@
+name: PrintName # 该job的名称
+on: push # 当每次push时都运⾏该job
+jobs:
+  print-name:
+    runs-on: ubuntu-latest # 指定job的运⾏环境
+    steps: # 步骤
+    - name: Print a name
+      env: # 定义环境变量
+        name: "HTX"
+      run: |
+           echo $name # 输出设定的环境变量$name
